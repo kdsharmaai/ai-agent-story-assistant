@@ -1,0 +1,26 @@
+[project]
+name = "ai-agent-story-assistant"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "kdsharmaai",email = "kd.sharma.ai@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.3.25"
+langchain-openai = "^0.3.18"
+langgraph = "^0.4.7"
+python-dotenv = "^1.1.0"
+flask = "^3.1.1"
+flask-cors = "^4.0.0"
+gunicorn = "^23.0.0"
+
+[tool.poetry]
+packages = [{include = "ai-agent-story-assistant", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
