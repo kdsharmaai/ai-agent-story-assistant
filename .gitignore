@@ -51,4 +51,7 @@ Thumbs.db
 *.sqlite3
 
 # LangGraph checkpoints
-.checkpoints/ 
+.checkpoints/
+
+# Extra
+nohup.out
