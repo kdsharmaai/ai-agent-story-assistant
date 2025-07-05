@@ -285,6 +285,9 @@
         continueBtn.addEventListener('click', continueStory);
         clearBtn.addEventListener('click', clearStory);
 
+        continueBtn.style.display = 'none';
+        clearBtn.style.display = 'none';
+
         async function startStory() {
             const userInput = storyInput.value.trim();
             if (!userInput) {
@@ -297,6 +300,9 @@
             
             // Add user input to story
             currentStory.push({ type: 'user', content: userInput });
+            startBtn.style.display = 'none';
+            continueBtn.style.display = 'block';
+            clearBtn.style.display = 'block';
             updateStoryDisplay();
             
             // Disable start button, enable continue button
@@ -393,6 +399,9 @@
             startBtn.disabled = false;
             continueBtn.disabled = true;
             updateStoryDisplay();
+            startBtn.style.display = 'block';
+            continueBtn.style.display = 'none';
+            clearBtn.style.display = 'none';
         }
 
         function showLoading() {
